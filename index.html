@@ -95,7 +95,6 @@
       <input type="text" id="gen-llave" placeholder="Ej: @PRUEBA000000000005">
       
       <button class="btn-gen" onclick="generarLink()">Generar y Copiar Enlace</button>
-      <input type="text" id="resultado-link" readonly style="margin-top: 10px; background: #fff; font-size: 11px;">
     </div>
 
   </div>
@@ -135,9 +134,6 @@
 
       const baseUrl = window.location.origin + window.location.pathname;
       const finalUrl = `${baseUrl}?nombre=${encodeURIComponent(inputNombre)}&monto=${encodeURIComponent(inputMonto)}&llave=${encodeURIComponent(inputLlave)}`;
-      
-      const resInput = document.getElementById('resultado-link');
-      resInput.value = finalUrl;
       
       navigator.clipboard.writeText(finalUrl);
       alert('¡Enlace generado y copiado al portapapeles!');
